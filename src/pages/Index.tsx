@@ -15,13 +15,25 @@ const Index = () => {
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
         <Navbar />
-        <div className="pt-16">
-          <About />
-          <Experience />
-          <Skills />
-          <Education />
-          <Certifications />
-          <Hobbies />
+        <div className="pt-16 transition-all duration-500">
+          <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <About />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <Experience />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <Skills />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <Education />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: "0.5s" }}>
+            <Certifications />
+          </div>
+          <div className="animate-fade-in" style={{ animationDelay: "0.6s" }}>
+            <Hobbies />
+          </div>
         </div>
         <Footer />
       </div>
