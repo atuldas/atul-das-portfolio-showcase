@@ -1,73 +1,117 @@
-# Welcome to your Lovable project
 
-## Project info
+# Atul Das Portfolio
 
-**URL**: https://lovable.dev/projects/bbc5e30c-f5d1-4bd7-9119-06f018cd38b2
+A professional portfolio website built with React, Tailwind CSS, and JSON data sources.
 
-## How can I edit this code?
+## Features
+- Responsive design that works on desktop and mobile devices
+- Light/dark mode toggle with system preference detection
+- Section-based content layout with smooth scrolling navigation
+- JSON-based content management for easy updates
+- Modern UI with clean typography and smooth transitions
 
-There are several ways of editing your application.
+## Getting Started
 
-**Use Lovable**
+### Prerequisites
+- Node.js (v16+)
+- npm or yarn
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bbc5e30c-f5d1-4bd7-9119-06f018cd38b2) and start prompting.
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/atuldas/portfolio.git
+cd portfolio
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install dependencies
+npm install
+# or
+yarn install
 ```
 
-**Edit a file directly in GitHub**
+### Development
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The site will be available at http://localhost:8080.
 
-**Use GitHub Codespaces**
+### Building for Production
+```bash
+npm run build
+# or
+yarn build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This will generate a production build in the `dist` directory.
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+### GitHub Pages Setup
+1. In your GitHub repository, go to Settings > Pages
+2. Set the source to GitHub Actions
+3. Add the following workflow file to `.github/workflows/deploy.yml`:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```yaml
+name: Deploy to GitHub Pages
 
-## How can I deploy this project?
+on:
+  push:
+    branches: [ main ]
 
-Simply open [Lovable](https://lovable.dev/projects/bbc5e30c-f5d1-4bd7-9119-06f018cd38b2) and click on Share -> Publish.
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-## Can I connect a custom domain to my Lovable project?
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
 
-Yes, you can!
+      - name: Install Dependencies
+        run: npm ci
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+      - name: Build
+        run: npm run build
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: dist
+```
+
+### Custom Domain Setup
+1. Purchase a domain from a provider (e.g., Namecheap, GoDaddy)
+2. In your GitHub repository, go to Settings > Pages
+3. Under "Custom domain", enter your domain name and save
+4. Configure your DNS settings with your domain provider:
+   - Add an A record pointing to GitHub Pages IP addresses:
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+   - Or add a CNAME record pointing to `yourusername.github.io`
+
+## Updating Content
+
+All content is stored in JSON files in the `src/data` directory:
+
+- `about.json`: Personal information and summary
+- `experience.json`: Work experience entries
+- `skills.json`: Technical and soft skills
+- `education.json`: Educational background
+- `certifications.json`: Professional certifications
+- `hobbies.json`: Personal interests and hobbies
+- `contact.json`: Contact information and social links
+
+To update content, simply edit the relevant JSON file and rebuild the project.
+
+## License
+This project is licensed under the MIT License.

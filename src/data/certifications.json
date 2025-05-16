@@ -1,0 +1,33 @@
+
+[
+  {
+    "id": 1,
+    "name": "Artificial Intelligence and Gen AI",
+    "issuer": "TechGyan and IISc Bangalore",
+    "year": "2025"
+  },
+  {
+    "id": 2,
+    "name": "Virtimo Digitalization Suite",
+    "issuer": "Virtimo AG",
+    "year": "2024"
+  },
+  {
+    "id": 3,
+    "name": "Oracle Cloud Infrastructure Foundations 2021 Certified Associate",
+    "issuer": "Oracle",
+    "year": "2022"
+  },
+  {
+    "id": 4,
+    "name": "Oracle Certified Professional Java Programmer",
+    "issuer": "Oracle",
+    "year": "2017"
+  },
+  {
+    "id": 5,
+    "name": "Oracle Certified Associate Java Programmer",
+    "issuer": "Oracle",
+    "year": "2017"
+  }
+]

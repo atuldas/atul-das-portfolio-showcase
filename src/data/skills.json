@@ -1,0 +1,22 @@
+
+{
+  "technical": [
+    {
+      "category": "Frontend",
+      "skills": ["Angular", "HTML", "CSS", "JavaScript"]
+    },
+    {
+      "category": "Backend",
+      "skills": ["Java", "Spring Boot"]
+    },
+    {
+      "category": "DevOps",
+      "skills": ["Git", "Jenkins", "Docker"]
+    }
+  ],
+  "soft": [
+    "Communication",
+    "Problem-solving",
+    "Public Speaking"
+  ]
+}

@@ -1,0 +1,31 @@
+
+[
+  {
+    "id": 1,
+    "company": "TransUnion GCC India Pvt Ltd",
+    "position": "Senior Software Engineer",
+    "period": "Sept 2024 – Present",
+    "description": "Working on enterprise-level software solutions."
+  },
+  {
+    "id": 2,
+    "company": "Bosch Global Software Technologies",
+    "position": "Senior Software Engineer",
+    "period": "Oct 2021 – Sept 2024",
+    "description": "Developed and maintained software solutions for global clients, focusing on performance optimization and scalability."
+  },
+  {
+    "id": 3,
+    "company": "Inspirage Software Consulting LLP",
+    "position": "Associate Consultant",
+    "period": "Feb 2020 – Oct 2021",
+    "description": "Provided technical consulting and implemented software solutions for clients."
+  },
+  {
+    "id": 4,
+    "company": "NTT Data",
+    "position": "Senior Software Development Associate",
+    "period": "Oct 2017 – Jan 2020",
+    "description": "Collaborated with cross-functional teams to develop and enhance software applications."
+  }
+]
