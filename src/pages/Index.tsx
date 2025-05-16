@@ -15,12 +15,14 @@ const Index = () => {
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
         <Navbar />
-        <About />
-        <Experience />
-        <Skills />
-        <Education />
-        <Certifications />
-        <Hobbies />
+        <div className="pt-16">
+          <About />
+          <Experience />
+          <Skills />
+          <Education />
+          <Certifications />
+          <Hobbies />
+        </div>
         <Footer />
       </div>
     </ThemeProvider>
